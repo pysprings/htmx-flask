@@ -1,0 +1,17 @@
+##########################################################
+# Aider Configuration
+##########################################################
+
+# Linting settings
+auto-lint: true
+lint-cmd: make fmt lint
+
+# Testing settings
+auto-test: true
+test-cmd: make test
+
+# Git settings
+auto-commits: false
+
+# Automatic reading
+read: REQUIREMENTS.md

@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "htmx-flask"
+version = "0.1.0"
+description = "HTMX Flask Integration Reference Implementation"
+authors = ["Ryan Freckleton <ryan.freckleton@gmail.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.1.0"
+
+[tool.poetry.group.dev.dependencies]
+bandit = "^1.8.0"
+black = "^24.10.0"
+flake8 = "^6.1.0"
+mypy = "^1.14.1"
+pytest = "^8.3.4"
+safety = "^3.2.14"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "."
