@@ -1,8 +1,26 @@
 {% extends "base.j2.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}My Todo List{% endblock %}
 
 {% block content %}
-    <h1>Todo List</h1>
-    {% include "fragments/_todo_list.j2.html" %}
+<!-- Header -->
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="display-4 text-center">My Todo List</h1>
+    </div>
+</div>
+
+<!-- Add Todo Form -->
+<div class="row justify-content-center mb-4">
+    <div class="col-md-8">
+        {% include "fragments/_todo_form.j2.html" %}
+    </div>
+</div>
+
+<!-- Todo List -->
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        {% include "fragments/_todo_list.j2.html" %}
+    </div>
+</div>
 {% endblock %}
