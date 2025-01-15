@@ -14,16 +14,12 @@
         {% block flash_messages %}
         <div class="row justify-content-center mb-4">
             <div class="col-md-8">
-                {% with messages = get_flashed_messages(with_categories=true) %}
-                    {% if messages %}
-                        {% for category, message in messages %}
-                            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
-                                {{ message }}
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                {% endwith %}
+                {% for message in page.flash_messages %}
+                    <div class="alert alert-{{ message.category }} alert-dismissible fade show" role="alert">
+                        {{ message.message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
             </div>
         </div>
         {% endblock %}

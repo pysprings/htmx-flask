@@ -1,7 +1,9 @@
-<div class="card">
+<div id="todo-form" class="card">
     <div class="card-body">
-        <form class="d-flex gap-2">
-            <input type="text" class="form-control form-control-lg" placeholder="What needs to be done?">
+        <form class="d-flex gap-2" hx-post="/todos" hx-target="#todo-list">
+            <input type="text" name="title" class="form-control form-control-lg" placeholder="What needs to be done?" 
+                   autofocus
+                   onhtmx:afterSwap="this.focus()">
             <button type="submit" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Add new todo">
                 <i class="bi bi-plus-lg"></i>
             </button>

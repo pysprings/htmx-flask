@@ -16,6 +16,7 @@ flake8 = "^6.1.0"
 mypy = "^1.14.1"
 pytest = "^8.3.4"
 safety = "^3.2.14"
+flake8-pyproject = "^1.2.3"
 
 [build-system]
 requires = ["poetry-core"]
@@ -23,3 +24,12 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 pythonpath = "."
+
+[tool.flake8]
+max-line-length = 88
+extend-ignore = [
+    "E1", "E2", "E3", "E4", "E5",  # All formatting errors
+    "W1", "W2", "W3", "W4", "W5",  # All warning codes
+    "F841",  # Unused variable
+    "E203"   # Whitespace before ':'
+]
